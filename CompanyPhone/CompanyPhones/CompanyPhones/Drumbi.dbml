@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Drumbi" Class="DrumbiDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=10.1.1.1;Initial Catalog=Drumbi;User ID=sa" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="DrumbiConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.tbl_Company" Member="tbl_Companies">
+    <Type Name="tbl_Company">
+      <Column Name="CompanyId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CompanyGUID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CompanyName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CompanyIcon" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Column Name="CompanyKey" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="CompanyBrandingTitle" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Column Name="CompanyBanner" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Column Name="CompanyDescription" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Column Name="CompanyParent" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CompanyLogin" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Column Name="CompanyReauthenticationLink" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Column Name="CompanyCreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="tbl_Company_tbl_CompanyAgent" Member="tbl_CompanyAgents" ThisKey="CompanyId" OtherKey="CompanyID" Type="tbl_CompanyAgent" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_CompanyAgent" Member="tbl_CompanyAgents">
+    <Type Name="tbl_CompanyAgent" Id="ID1">
+      <Column Name="AgentID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CompanyID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UniqueID" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="FirstName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="LastName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ProfilePicture" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Password" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Column Name="Salt" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Column Name="Phone" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Extension" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="tbl_Company_tbl_CompanyAgent" Member="tbl_Company" ThisKey="CompanyID" OtherKey="CompanyId" Type="tbl_Company" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.sp_ChangeAgentPhoneNumber" Method="sp_ChangeAgentPhoneNumber">
+    <Parameter Name="AgentID" Parameter="agentID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PhoneNumber" Parameter="phoneNumber" Type="System.String" DbType="VarChar(100)" />
+    <ElementType IdRef="ID1" />
+  </Function>
+</Database>

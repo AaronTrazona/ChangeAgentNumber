@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Drumbi">
+  <DataContextMoniker Name="/DrumbiDataContext" />
+  <nestedChildShapes>
+    <classShape Id="fca00231-e188-43cf-bd86-bea7ae7891ff" absoluteBounds="0.5, 2.125, 2, 2.73962646484375">
+      <DataClassMoniker Name="/DrumbiDataContext/tbl_Company" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2f6ddae0-351f-4b51-b233-4dde67bfab80" absoluteBounds="0.51500000000000012, 2.585, 1.9700000000000002, 2.17962646484375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="95c4f18d-e1b4-4ffb-a160-05e77c632c9c" absoluteBounds="2.75, 2.125, 2, 2.9039737955729166">
+      <DataClassMoniker Name="/DrumbiDataContext/tbl_CompanyAgent" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2f1497b1-d551-42af-8b4a-472aedc1cf54" absoluteBounds="2.765, 2.585, 1.9700000000000002, 2.3439737955729165" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.5 : 3.49481323242188); (2.75 : 3.49481323242188)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DrumbiDataContext/tbl_Company/tbl_Company_tbl_CompanyAgent" />
+      <nodes>
+        <classShapeMoniker Id="fca00231-e188-43cf-bd86-bea7ae7891ff" />
+        <classShapeMoniker Id="95c4f18d-e1b4-4ffb-a160-05e77c632c9c" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

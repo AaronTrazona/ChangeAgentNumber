@@ -1,0 +1,5 @@
+C:\Users\Kevin\Desktop\CompanyPhone\CompanyPhones\CompanyPhones\bin\CompanyPhones.dll
+C:\Users\Kevin\Desktop\CompanyPhone\CompanyPhones\CompanyPhones\bin\CompanyPhones.pdb
+C:\Users\Kevin\Desktop\CompanyPhone\CompanyPhones\CompanyPhones\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Kevin\Desktop\CompanyPhone\CompanyPhones\CompanyPhones\obj\Debug\CompanyPhones.dll
+C:\Users\Kevin\Desktop\CompanyPhone\CompanyPhones\CompanyPhones\obj\Debug\CompanyPhones.pdb
